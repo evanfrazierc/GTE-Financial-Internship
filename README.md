@@ -19,3 +19,7 @@ I came up with an innovative mobile banking strategy for GTE Financial which inc
 using the online software Atomic.io while it was in a free beta. My idea was to implement an adaptive user interface using 
 a dynamic tile interface and including an automatically personalized home screen. I presented my ideas to the executive board
 and the strategy is scheduled to be implemented by October 2016.
+
+A Day in the Life Video
+
+The intern group collaborated on this recruiting tool.
