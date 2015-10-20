@@ -1,0 +1,63 @@
+@ECHO OFF
+ECHO.
+ECHO ...............................................
+ECHO This program will delete and re-map your G drive.
+ECHO ...............................................
+ECHO.
+ECHO Choose which OSI environment you wish to use:
+ECHO 1: Test OSI
+ECHO 2: Dev OSI
+ECHO 3: Training OSI
+ECHO 4: Exit and Restore OSI
+ECHO.
+
+
+
+:MENU
+ECHO.
+SET /P M=Type 1, 2, 3, or 4 then press ENTER:
+cd %windir%\system32
+IF %M%==1 GOTO TEST
+IF %M%==2 GOTO DEV
+IF %M%==3 GOTO TRAIN
+IF %M%==4 GOTO END
+GOTO MENU
+
+:TEST
+ECHO.
+ECHO re-mapping G drive to Test OSI...
+:: delete G drive
+net use G: /delete
+:: map G drive to wherever Test OSI resides
+net use G: \\gtefilserv\user\Christopher.Frazier\Public\TST
+:: run OSI exe
+start G:\TST.jpg
+GOTO MENU
+
+:DEV
+ECHO.
+ECHO re-mapping G drive to Dev OSI...
+:: delete G drive
+net use G: /delete
+:: map G drive to wherever Dev OSI resides
+net use G: \\gtefilserv\user\Christopher.Frazier\Public\DEV
+:: run OSI exe
+start G:\DEV.jpg
+GOTO MENU
+
+:TRAIN
+ECHO.
+ECHO re-mapping G drive to Training OSI...
+:: delete G drive
+net use G: /delete
+:: map G drive to wherever Training OSI resides
+net use G: \\gtefilserv\user\Christopher.Frazier\Public\TRN
+:: run OSI exe 
+start G:\TRN.jpg
+GOTO MENU
+
+:END
+:: revert g drive back to \\osifile\osi
+net use G: /delete
+net use G: \\osifile\osi
+GOTO EOF
