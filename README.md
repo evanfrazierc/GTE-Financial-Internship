@@ -22,4 +22,7 @@ and the strategy is scheduled to be implemented by October 2016.
 
 A Day in the Life Video
 
+https://www.youtube.com/watch?v=8kr0-ffovbw
+
 The intern group collaborated on this recruiting tool.
+
